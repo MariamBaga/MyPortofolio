@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(120deg, #ffffff, #ffffff, #ffffff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav {
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between; /* Espace entre l'image et les éléments de la nav */
+    align-items: center; /* Alignement vertical des éléments */
+    padding: 5px 20px; /* Ajout d'un padding pour un espacement intérieur */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centre les éléments de la nav */
+    flex-grow: 1; /* Permet aux éléments de croître pour remplir l'espace */
+  }
+  
+  nav ul li {
+    margin: 0 15px; /* Espace entre les éléments de la nav */
+  }
+  
+  nav ul li a {
+    color: #ff9800;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px; /* Espacement autour des liens */
+    transition: color 0.3s; /* Animation sur le changement de couleur */
+  }
+  
+  nav ul li a:hover {
+    color: #fff; /* Changement de couleur au survol */
+  }
+  
+  .thumbnail {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ff9800;
+  }
+  
+  header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ff9800, #333);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  h2 {
+    color: #ff9800;
+    margin-bottom: 10px;
+  }
+  
+  #profile, #projects, #skills, #experience, #contact {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px); /* Position initiale pour l'animation */
+    opacity: 0; /* Rendre invisible pour l'animation */
+    animation: fadeInUp 0.6s forwards; /* Appel à l'animation */
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      transform: translateY(0); /* Position finale */
+      opacity: 1; /* Visible à la fin de l'animation */
+    }
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #ff9800;
+  }
+  
+  footer button {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: transform 0.3s; /* Animation sur le bouton */
+  }
+  
+  footer button:hover {
+    transform: translateY(-2px); /* Léger mouvement au survol */
+  }
+  
+  .project-description {
+    display: none; /* Cacher par défaut */
+  }
+  
+  /* Animation de compétence */
+  .skill-item {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .skill-item.visible {
+    opacity: 1; /* Rendre visible lors de l'animation */
+  }
+  
+  /* Animation des cartes d'expérience */
+  .experience-card {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px); /* Position initiale pour l'animation */
+    opacity: 0; /* Rendre invisible pour l'animation */
+    animation: fadeIn 0.6s forwards; /* Appel à l'animation */
+  }
+  
+  @keyframes fadeIn {
+    to {
+      transform: translateY(0); /* Position finale */
+      opacity: 1; /* Visible à la fin de l'animation */
+    }
+  }
+  
+
+  .contact-cards {
+    display: flex;
+    justify-content: space-between; /* Espace entre les cartes */
+    flex-wrap: wrap; /* Permet aux cartes de s'adapter à différentes tailles d'écran */
+    margin-top: 20px; /* Marge supérieure pour espacer des titres */
+  }
+  
+  .contact-card {
+    background-color: #f9f9f9; /* Couleur de fond de la carte */
+    border: 1px solid #ccc; /* Bordure de la carte */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 15px; /* Espacement intérieur */
+    margin: 10px; /* Espacement entre les cartes */
+    flex: 1 1 30%; /* Permet aux cartes de croître et de se réduire, avec une largeur de base de 30% */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner un effet de profondeur */
+    transition: transform 0.3s; /* Animation lors du survol */
+  }
+  
+  .contact-card:hover {
+    transform: scale(1.05); /* Agrandissement léger au survol */
+  }
+  
+  .contact-card h3 {
+    color: #ff9800; /* Couleur des titres de carte */
+    margin-bottom: 10px; /* Marge inférieure pour espacer des paragraphes */
+  }
+  
+  .contact-card p {
+    margin: 0; /* Aucune marge pour les paragraphes */
+  }
+  
+  .contact-card a {
+    text-decoration: none; /* Pas de soulignement */
+    color: #333; /* Couleur du lien */
+  }
+  
+  .contact-card a:hover {
+    color: #ff9800; /* Changement de couleur au survol des liens */
+  }
+  
+
+  /* Styles for mobile menu */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px;
+    width: 25px;
+    background-color: #ff9800;
+    margin: 3px 0; /* Space between bars */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide menu items by default */
+        flex-direction: column; /* Stack menu items vertically */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Adjust based on nav height */
+        left: 0;
+        background-color: #333; /* Background color for dropdown */
+        width: 100%;
+        z-index: 1000; /* Make sure it appears above other content */
+    }
+
+    nav ul.active {
+        display: flex; /* Show menu items when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show hamburger icon */
+      
+        
+    }
+}
