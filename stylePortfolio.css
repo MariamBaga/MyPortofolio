@@ -209,14 +209,17 @@
     margin: 3px 0; /* Space between bars */
 }
 
+p{
+  margin-top: 15px;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
     nav ul {
         display: none; /* Hide menu items by default */
         flex-direction: column; /* Stack menu items vertically */
         position: absolute; /* Position it absolutely */
-        top: 60px; /* Adjust based on nav height */
-        left: 0;
+        top: 100px; /* Adjust based on nav height */
+        left: 50%;
         background-color: #333; /* Background color for dropdown */
         width: 100%;
         z-index: 1000; /* Make sure it appears above other content */
@@ -231,4 +234,6 @@
       
         
     }
+
+    
 }
